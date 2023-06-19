@@ -10,7 +10,7 @@ model.config.forced_decoder_ids = processor.get_decoder_prompt_ids(language="heb
 # load dummy dataset and read audio files
 # ds = load_dataset("hf-internal-testing/librispeech_asr_dummy", "clean", split="validation")
 # sample = ds[0]["audio"]
-wav, sr = torchaudio.load("/Users/amitroth/PycharmProjects/vall-e/data/reference/saspeech/amit.wav")
+wav, sr = torchaudio.load("/cs/labs/adiyoss/amitroth/vall-e/data/reference/saspeech/amit.wav")
 print("WAV")
 print(wav)
 input_features = processor(wav, sampling_rate=sr, return_tensors="pt").input_features
